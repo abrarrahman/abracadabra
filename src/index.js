@@ -1,13 +1,23 @@
+// Import Bootstrap CSS
+import 'bootstrap/dist/css/bootstrap.min.css';
+// // Import js files for Bootstrap
+// import $ from 'jquery';
+// import Popper from 'popper.js';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { ThemeContextProvider } from './context/theme-context'
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <ThemeContextProvider>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </ThemeContextProvider>,
   document.getElementById('root')
 );
 

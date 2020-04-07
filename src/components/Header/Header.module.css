@@ -1,0 +1,50 @@
+header{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  height:calc(100% - 3vmin - 2*2vmin - 10px);
+  background:var(--bg-nav);
+  text-align: center;
+  clip-path: polygon(0% 0%,0% 70%,50% 100%,100% 70%,100% 0%);
+}
+/* Logo */
+.logo{
+  margin: 0 auto;
+  padding-top: calc(10vmin + 10vh);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.invert{
+  filter: invert(100%);
+}
+.logoWand{
+  width: 28%;
+  margin-left: -15%;
+}
+.logoText{
+  width: 84%;
+}
+/* Logo Animation */
+@keyframes magic {
+  0%{
+    transform: rotate(0deg);
+    transform-origin: bottom left;
+  }
+  86%{
+    filter: invert(23%) sepia(100%) hue-rotate(360deg);
+  }
+  93%{
+    transform: rotate(0deg);
+    transform-origin: bottom left;
+    filter: invert(23%) sepia(100%) hue-rotate(360deg);
+  }
+  100%{
+    transform: rotate(-5deg);
+    transform-origin: bottom left;
+    filter: invert(23%) sepia(100%) hue-rotate(360deg);
+  }
+}
+.logo:hover .logoWand{
+  animation: magic 1400ms 2 alternate;
+}

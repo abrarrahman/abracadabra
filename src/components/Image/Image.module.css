@@ -1,0 +1,13 @@
+.image{
+  width: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+  /* border: var(--text) 1px solid; */
+  -webkit-box-shadow: var(--boxshadow);
+  -moz-box-shadow: var(--boxshadow);
+  box-shadow: var(--boxshadow);
+}
+.container{
+  width: 100%;
+  margin: auto;
+}
