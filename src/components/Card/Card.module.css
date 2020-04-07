@@ -1,13 +1,8 @@
 .Card{
-  padding: var(--padbase);
-  /* margin: 2vh 5vw; */
   background: var(--bg-nav);
   border-radius: 10px;
-  /* border: var(--text) 1px solid; */
   -webkit-box-shadow: var(--boxshadow);
   -moz-box-shadow: var(--boxshadow);
   box-shadow: var(--boxshadow);
-  /* max-width: 1000px; */
   box-sizing: border-box;
-  /* font-size: 1.5vmax; */
 }
