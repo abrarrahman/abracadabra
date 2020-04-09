@@ -1,5 +1,6 @@
 // Import Bootstrap CSS
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'font-awesome/css/font-awesome.min.css';
 // // Import js files for Bootstrap
 // import $ from 'jquery';
 // import Popper from 'popper.js';

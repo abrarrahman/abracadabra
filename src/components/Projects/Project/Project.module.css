@@ -1,0 +1,10 @@
+.projectImg:hover {
+  transform: scale(1.05);
+}
+.projectImg{
+  transition: transform 300ms;
+}
+.link{
+  color: var(--border-color);
+  font-weight: bold;
+}

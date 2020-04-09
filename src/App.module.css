@@ -22,3 +22,10 @@
     height: 60vh;
   }
 }
+.topArrow{
+  background: var(--border-color);
+  width: 30px;
+  height: 20px;
+  clip-path: polygon(0 100%, 50% 0, 100% 100%);
+  margin: 5px auto;
+}
