@@ -1,12 +1,12 @@
-ul{
-  border:0;
-  margin:0;
-  padding:0;
+ul {
+  border: 0;
+  margin: 0;
+  padding: 0;
   list-style: none;
   display: flex;
   justify-content: space-evenly;
 }
-.NavItem{
+.NavItem {
   width: 100%;
   text-align: center;
   cursor: pointer;
@@ -19,16 +19,16 @@ ul{
     font-size: 1em;
   }
 } */
-.NavItem:hover{
-  color: var(--border-color)
+.NavItem:hover {
+  color: var(--border-color);
 }
-nav{
+nav {
   padding: var(--padbase);
   box-sizing: border-box;
   background: var(--bg-nav);
   color: var(--text);
 }
-.themeContainer{
+.themeContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -40,62 +40,64 @@ nav{
   z-index: 1;
   padding: 5vmin var(--padbase);
   border-radius: 10px;
+  top: -500px;
+  left: calc(50vw - 25vmin);
 }
-.theme{
+.theme {
   margin: 2vmin 0;
   cursor: pointer;
   font-size: 1.5em;
 }
-.theme:hover{
+.theme:hover {
   color: var(--border-color);
 }
-.themeExpand{
+.themeExpand {
   animation: showtheme 0.4s ease-out forwards;
 }
-.themeShrink{
+.themeShrink {
   animation: hidetheme 0.4s ease-out forwards;
 }
-.navExpand{
+.navExpand {
   animation: shownav 0.2s ease-out forwards;
 }
-.navShrink{
+.navShrink {
   animation: hidenav 0.2s ease-out forwards;
 }
 @keyframes showtheme {
-  0%{
+  0% {
     transform: translateY();
   }
-  50%{
-    transform: translateY(45vh);
+  50% {
+    transform: translateY(calc(45vh + 500px));
   }
-  100%{
-    transform: translateY(40vh);
+  100% {
+    transform: translateY(calc(40vh + 500px));
   }
 }
 @keyframes hidetheme {
-  0%{
-    transform: translateY(40vh);
+  0% {
+    transform: translateY(calc(40vh + 500px));
   }
-  50%{
-    transform: translateY(45vh);
+  50% {
+    transform: translateY(calc(45vh + 500px));
   }
-  100%{
-    transform: translateY(-50vh);
+  100% {
+    transform: translateY(calc(-50vh + 500px));
   }
 }
 @keyframes shownav {
-  0%{
+  0% {
     transform: translateY(-10vh);
   }
-  100%{
+  100% {
     transform: translateY(0);
   }
 }
 @keyframes hidenav {
-  0%{
+  0% {
     transform: translateY(0);
   }
-  100%{
+  100% {
     transform: translateY(-10vh);
   }
 }
