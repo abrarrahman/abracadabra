@@ -1,5 +1,5 @@
-import React, { useContext, useEffect, useState } from "react";
 import { useScrollPosition } from "@n8tb1t/use-scroll-position";
+import React, { useContext, useState } from "react";
 import ThemeContext from "../../context/theme-context";
 import classes from "./Navbar.module.css";
 
@@ -7,8 +7,7 @@ import Backdrop from "../UI/Backdrop/Backdrop";
 
 const Navbar = ({ refs }) => {
   const { showThemeMenu, setTheme, toggleThemeMenu } = useContext(ThemeContext);
-  const [hideNav, setHideNav] = useState(false);
-  const [allowThemeMenuAnimation, setAllowThemeMenuAnimation] = useState(false);
+  const [hideNav, setHideNav] = useState(null);
   const themeClasses = [classes.themeContainer];
   const navClasses = ["fixed-top"];
 
@@ -33,21 +32,16 @@ const Navbar = ({ refs }) => {
     ref.current.scrollIntoView({ behavior: "smooth" });
   };
 
-  useEffect(() => {
-    if (showThemeMenu) {
-      setAllowThemeMenuAnimation(true);
-    }
-  }, [showThemeMenu]);
-
-  if (allowThemeMenuAnimation) {
+  if (showThemeMenu != null) {
     showThemeMenu
       ? themeClasses.push(classes.themeExpand)
       : themeClasses.push(classes.themeShrink);
   }
-  hideNav
-    ? navClasses.push(classes.navShrink)
-    : navClasses.push(classes.navExpand);
-
+  if (hideNav != null) {
+    hideNav
+      ? navClasses.push(classes.navShrink)
+      : navClasses.push(classes.navExpand);
+  }
   return (
     <React.Fragment>
       <nav className={navClasses.join(" ")}>

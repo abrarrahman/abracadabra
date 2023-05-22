@@ -9,7 +9,7 @@ const ThemeContext = React.createContext({
 
 export const ThemeContextProvider = props => {
   const [ theme, setTheme ] = useState('light');
-  const [ showThemeMenu, setShowThemeMenu ] = useState(false);
+  const [ showThemeMenu, setShowThemeMenu ] = useState(null);
 
 
   const setThemeHandler = theme => {
